@@ -235,7 +235,6 @@ public:
                 throw std::runtime_error("Failed to create worker thread " + std::to_string(i));
             }
 
-            // Set thread priorities based on configuration
             int priorityLevel = THREAD_PRIORITY_NORMAL;
             if (threadConfigurations[i] > 0) {
                 priorityLevel = THREAD_PRIORITY_HIGHEST;
